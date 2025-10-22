@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Gate</title>
+  <style>
+    body {
+      background: #111;
+      color: #0ff;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 1em;
+      border: 2px solid #0ff;
+      border-radius: 5px;
+      background: #222;
+      color: #0ff;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #0ff;
+      color: #111;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Welcome to the Gate</h1>
+  <p>Enter the password to continue</p>
+  <input type="password" id="password" placeholder="Password" />
+  <br />
+  <button onclick="checkPassword()">Enter</button>
+  <div id="error"></div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      const correct = "secret69"; // Change this to your actual password
+      if (input === correct) {
+        window.location.href = "https://agrofig.github.io/blankweb/";
+      } else {
+        document.getElementById('error').textContent = "Incorrect password.";
+      }
+    }
+  </script>
+</body>
+</html>
+
